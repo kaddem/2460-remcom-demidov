@@ -1,0 +1,54 @@
+.promo {
+  padding: 140px 0;
+  background-color: rgba($color-light, 0.2);
+}
+
+.promo-inner {
+  @include container;
+}
+
+.promo-wrap {
+  display: flex;
+  margin: 0 (-$gap-half);
+}
+
+.promo-info {
+  flex-basis: 50%;
+  padding: 0 $gap-half;
+}
+
+.promo-visual {
+  position: relative;
+  flex-basis: 50%;
+  padding: 0 $gap-half;
+}
+
+.promo-photo-wrap {
+  position: relative;
+}
+
+.promo-photo-desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: rgba($color-dark, 0.8);
+}
+
+.promo-title {
+  margin-bottom: 20px;
+  font-family: $font-ral;
+  font-weight: 300;
+  font-size: 116px;
+  line-height: 136px;
+  color: $color-accent;
+}
+
+.promo-text {
+  margin-bottom: 70px;
+  font-size: 32px;
+  line-height: 44px;
+  color: $color-accent;
+}

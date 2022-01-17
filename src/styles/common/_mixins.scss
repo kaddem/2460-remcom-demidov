@@ -1,0 +1,15 @@
+@mixin container($width: 1278px) {
+  width: $width;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+@mixin title-section {
+  margin: 0;
+  font-family: $font-ral;
+  text-align: center;
+  font-weight: 300;
+  font-size: 58px;
+  line-height: 68px;
+  color: $color-accent;
+}

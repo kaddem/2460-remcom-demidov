@@ -1,0 +1,11 @@
+.order {
+  padding: 100px 0 90px;
+}
+
+.order-inner {
+  @include container;
+}
+
+.order-title {
+  @include title-section;
+}

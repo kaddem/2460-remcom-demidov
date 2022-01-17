@@ -1,0 +1,66 @@
+.services {
+  padding: 100px 0;
+  background-color: $color-light;
+  color: $color-dark;
+}
+
+.services-inner {
+  @include container;
+}
+
+.services-title {
+  @include title-section;
+}
+
+.services-caption {
+  margin-bottom: 30px;
+  font-family: $font-ral;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.services-text {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-left: -$gap-half;
+  margin-right: -$gap-half;
+}
+
+.services-item {
+  flex-basis: 50%;
+  margin-top: 50px;
+  padding: 0 $gap-half;
+}
+
+.services-icon {
+  display: block;
+  width: 80px;
+  height: 56px;
+  margin-bottom: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.services-icon-furniture {
+  background-image: url("../images/icon-furniture.svg");
+}
+
+.services-icon-speaker {
+  background-image: url("../images/icon-speaker.svg");
+}
+
+.services-icon-phone {
+  background-image: url("../images/icon-phone.svg");
+}
+
+.services-icon-micro {
+  background-image: url("../images/icon-micro.svg");
+}
