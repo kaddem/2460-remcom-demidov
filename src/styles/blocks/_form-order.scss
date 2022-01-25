@@ -3,6 +3,15 @@
   flex-wrap: wrap;
   width: 66.66%;
   margin: 40px auto 0;
+
+  @media (max-width: $tablet-max) {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  @media (max-width: $mobile-max) {
+    display: block;
+  }
 }
 
 .form-order-field {

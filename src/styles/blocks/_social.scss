@@ -2,10 +2,20 @@
   display: flex;
   align-items: center;
   list-style: none;
+
+  @media (max-width: $mobile-max) {
+    margin-bottom: 10px;
+  }
 }
 
 .social-item {
   margin-left: 15px;
+
+  &:first-child {
+    @media (max-width: $mobile-max) {
+      margin-left: 0;
+    }
+  }
 }
 
 .social-link {

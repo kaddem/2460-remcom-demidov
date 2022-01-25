@@ -1,6 +1,7 @@
 @mixin container($width: 1278px) {
-  width: $width;
+  max-width: $width + $gap;
   margin: 0 auto;
+  padding: 0 $gap-half;
   border: 1px solid red;
 }
 
@@ -12,4 +13,14 @@
   font-size: 58px;
   line-height: 68px;
   color: $color-accent;
+
+  @media (max-width: $tablet-max) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  @media (max-width: $mobile-max) {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }

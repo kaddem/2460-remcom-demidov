@@ -9,8 +9,13 @@ body {
   margin: 0;
   font-family: $font;
   color: $color-dark;
+
+  @media (max-width: $mobile-max) {
+    padding-top: 50px;
+  }
 }
 
 img {
   display: block;
+  max-width: 100%;
 }

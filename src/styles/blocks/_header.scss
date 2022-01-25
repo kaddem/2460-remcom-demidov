@@ -7,6 +7,14 @@
   padding: 25px 0;
   background-color: $color-dark;
   color: $color-light;
+
+  @media (max-width: $tablet-max) {
+    padding: 29px 0;
+  }
+
+  @media (max-width: $mobile-max) {
+    padding: 12px 0;
+  }
 }
 
 .header-inner {
@@ -26,6 +34,16 @@
   line-height: 49px;
   text-decoration: none;
   color: inherit;
+
+  @media (max-width: $tablet-max) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  @media (max-width: $mobile-max) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 .phone {
@@ -34,4 +52,26 @@
   line-height: 33px;
   color: inherit;
   text-decoration: none;
+
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.phone-tablet {
+  display: none;
+
+  @media (max-width: $mobile-max) {
+    display: inline-block;
+    margin-left: 0;
+  }
+}
+
+.burger {
+  display: none;
+  margin-left: 35px;
+
+  @media (max-width: $tablet-max) {
+    display: block;
+  }
 }
