@@ -82,6 +82,10 @@
   }
 }
 
+.services-item-accent {
+  color: $color-accent;
+}
+
 .services-icon {
   display: block;
   width: 80px;
@@ -106,3 +110,4 @@
 .services-icon-micro {
   background-image: url("../images/icon-micro.svg");
 }
+

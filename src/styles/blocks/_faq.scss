@@ -1,0 +1,15 @@
+.faq {
+  padding: 130px 0;
+}
+
+.faq-inner {
+  @include container;
+}
+
+.faq-title {
+  @include title-section;
+}
+
+.faq-content {
+  margin-top: 100px;
+}
