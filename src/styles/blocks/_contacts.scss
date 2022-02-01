@@ -1,0 +1,29 @@
+.contacts {
+  padding: 140px 0 130px;
+}
+
+.contacts-inner {
+  @include container;
+}
+
+.contacts-title {
+  @include title-section;
+}
+
+.contacts-item {
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.contacts-info {
+  flex-basis: 41.66%;
+  padding-right: $gap-half;
+}
+
+.contacts-map {
+  flex-basis: 58.33%;
+  padding-left: $gap-half;
+}

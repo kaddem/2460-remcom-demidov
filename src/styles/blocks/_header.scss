@@ -9,11 +9,11 @@
   color: $color-light;
 
   @media (max-width: $tablet-max) {
-    padding: 29px 0;
+    padding: 27px 0;
   }
 
   @media (max-width: $mobile-max) {
-    padding: 12px 0;
+    padding: 4px 0;
   }
 }
 
@@ -69,9 +69,31 @@
 
 .burger {
   display: none;
+  width: 45px;
+  height: 45px;
   margin-left: 35px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 
   @media (max-width: $tablet-max) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:before,
+  &:after,
+  span {
+    content: '';
     display: block;
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background-color: $color-light;
+  }
+
+  span {
+    font-size: 0;
   }
 }
