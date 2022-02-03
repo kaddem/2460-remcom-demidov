@@ -1,0 +1,48 @@
+.slider {
+  padding: 0 40px;
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      margin: 0 5px;
+    }
+
+    .slick-active {
+      button {
+        background-color: $color-dark;
+      }
+    }
+
+    button {
+      display: block;
+      width: 10px;
+      height: 10px;
+      font-size: 0;
+      border-radius: 5px;
+      border: 2px solid $color-dark;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    font-size: 0;
+    border: 1px solid #000;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+}
+

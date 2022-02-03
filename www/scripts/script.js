@@ -30,7 +30,9 @@ $(document).ready(function(){
 
 
   // Табы в контактах
-  $('.j-tabs-link').on('click', function(){
+  $('.j-tabs-link').on('click', function(event){
+    event.preventDefault();
+
     const index = $(this).index('.j-tabs-link');
 
     $('.j-tabs-link').removeClass('active');
@@ -42,7 +44,8 @@ $(document).ready(function(){
 
 
   // Фильтр портфолио
-  $('.j-filter-link').on('click', function(){
+  $('.j-filter-link').on('click', function(event){
+    event.preventDefault();
 
     const filterType = $(this).data('filter');
 
@@ -68,9 +71,53 @@ $(document).ready(function(){
 
 
   // Slider
+  if ( $('.j-slider').length ) {
+    $('.j-slider').slick({
+      dots: true,
+    });
+  }
 
-  $('.j-slider').slick({
-    dots: true,
+
+  // Подгрузка отзывов
+
+  $('.j-reviews-btn').on('click', function() {
+
+    $.ajax({
+      type: 'POST',
+      url: '/jsons/reviews.json',
+      data: 'count=2&shown=4',
+      success: function(res) {
+        let htmlString = getHtmlString(res.review);
+        printToPage(htmlString);
+      }
+    });
   });
+
+  function getHtmlString(reviewsArray) {
+    let htmlItem = '';
+    
+    reviewsArray.forEach(function(review) {
+      htmlItem = htmlItem + `<div class="reviews-item">
+        <div class="review-card">
+          <div class="review-ava">
+            <img src="${review.url}" alt="" class="review-pic">
+          </div>
+          <div class="review-text">
+            <strong class="review-name">${review.name}</strong>
+            <blockquote class="review-quote">
+              “${review.quote}”
+            </blockquote>
+          </div>
+        </div>
+      </div>`;
+    });
+
+    return htmlItem;
+    
+  }
+
+  function printToPage(string) {
+    $('.j-reviews-list').append(string);
+  }
 
 });
