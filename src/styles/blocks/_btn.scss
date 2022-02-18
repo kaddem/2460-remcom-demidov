@@ -10,6 +10,11 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    box-shadow: 0 0 5px $color-accent;
+  }
 }
 
 .btn-form {

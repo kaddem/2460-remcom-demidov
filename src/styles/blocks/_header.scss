@@ -76,24 +76,71 @@
   border: none;
 
   @media (max-width: $tablet-max) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    display: block;
   }
 
   &:before,
-  &:after,
-  span {
+  &:after {
     content: '';
+    position: absolute;
+    left: 0;
     display: block;
-    width: 6px;
-    height: 6px;
-    margin: 0 3px;
-    border-radius: 50%;
+    width: 100%;
+    height: 3px;
     background-color: $color-light;
+    transition: all .3s;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
   }
 
   span {
     font-size: 0;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      margin: auto;
+      background-color: $color-light;
+      transition: all .3s;
+    }
+  }
+}
+
+.burger.is-open {
+  &:before,
+  &:after {
+    opacity: 0;
+  }
+
+  &:before {
+    transform: translateX(20px);
+  }
+
+  &:after {
+    transform: translateX(-20px);
+  }
+
+  span {
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(135deg);
+    }
   }
 }

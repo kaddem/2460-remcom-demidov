@@ -14,8 +14,10 @@
   line-height: 49px;
   color: $color-dark;
   text-decoration: none;
+  transition: all .3s;
 
-  &.active {
+  &.active,
+  &:hover {
     color: $color-accent;
   }
 }

@@ -3,6 +3,7 @@ $(document).ready(function(){
   // let isOpen = false;
 
   $('.j-burger').on('click', function(){
+    $(this).toggleClass('is-open');
     $('.j-menu').slideToggle();
     // if (isOpen) {
     //   $('.j-menu').slideUp();
@@ -95,7 +96,7 @@ $(document).ready(function(){
 
   function getHtmlString(reviewsArray) {
     let htmlItem = '';
-    
+
     reviewsArray.forEach(function(review) {
       htmlItem = htmlItem + `<div class="reviews-item">
         <div class="review-card">
@@ -113,7 +114,7 @@ $(document).ready(function(){
     });
 
     return htmlItem;
-    
+
   }
 
   function printToPage(string) {
